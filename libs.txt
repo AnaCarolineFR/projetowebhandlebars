@@ -1,0 +1,3 @@
+#libs
+npm install mysql2 --save
+npm install body-parser --save // serve para pegar informações do front e enviar para o backend
