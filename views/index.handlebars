@@ -6,10 +6,10 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active text-white" aria-current="page"
-                            href="./cadastrar">Cadastrar</a>
+                            href="/cadastrar">Cadastrar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white-50" href="./consultar">Consultar</a>
+                        <a class="nav-link text-white-50" href="/consultar">Consultar</a>
                     </li>
                 </ul>
             </div>
@@ -19,29 +19,29 @@
         <p class="display-6">Cadastrar - Agendamento de Potenciais Clientes</p>
         <p>Cadastrar Agendamento de potenciais clientes</p>
     </div>    
-    <form class="p-3" style="padding-bottom: 200px;">
+    <form action="/cadastrar" method="POST" class="p-3" style="padding-bottom: 200px;">
         <div class="col-md-12 mb-4">
             <label for="inputNome" class="form-label">Nome:</label>
-            <input type="nome" class="form-control" id="inputNome">
+            <input name="nome" type="nome" class="form-control" id="inputNome">
         </div>
         <div class="col-md-12 mb-4">
             <label for="inputTelefone" class="form-label">Telefone:</label>
-            <input type="telefone" class="form-control" id="inputTelefone">
+            <input name="telefone" type="telefone" class="form-control" id="inputTelefone">
         </div>
         <div class="col-md-12 mb-4">
             <label for="inputOrigem" class="form-label">Origem:</label>
-            <select id="inputOrigem" class="form-select">
+            <select name="origem" id="inputOrigem" class="form-select">
                 <option selected>Celular</option>
                 <option>Telefone fixo</option>
             </select>
         </div>
         <div class="col-12 mb-4">
             <label for="inputData" class="form-label">Data do contato:</label>
-            <input type="date" class="form-control" id="inputData">
+            <input name="data_contato" type="date" class="form-control" id="inputData">
         </div>
         <div class="col-md-12 mb-4">
             <label for="inputObs" class="form-label">Observação:</label>
-            <textarea class="form-control" id="inputObs" rows="3"></textarea>
+            <textarea name="observacao" class="form-control" id="inputObs" rows="3"></textarea>
         </div>
         <div class="col-12 mb-4">
             <button type="submit" class="btn btn-primary">Cadastrar</button>

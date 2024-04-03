@@ -13,18 +13,18 @@
                     <li class="nav-item">
                         <a class="nav-link active text-white"
                             aria-current="page"
-                            href="./cadastrar">Cadastrar</a>
+                            href="/cadastrar">Cadastrar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white-50"
-                            href="./consultar">Consultar</a>
+                            href="/consultar">Consultar</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container-sm gap-3">
-        <p class="display-6">Cadastrar - Agendamento de Potenciais Clientes</p>
+        <p class="display-6">Consultar - Agendamento de Potenciais Clientes</p>
         <p>Cadastrar Agendamento de potenciais clientes</p>
     </div>
     <div class="table-responsive container w-70">
@@ -36,8 +36,25 @@
                     <td class="bg-primary text-white text-center" scope="col">Origem</td>
                     <td class="bg-primary text-white text-center" scope="col">Data de Contato</td>
                     <td class="bg-primary text-white text-center" scope="col">Observação</td>
+                    <td class="bg-primary text-white text-center" scope="col"></td>
+                    <td class="bg-primary text-white text-center" scope="col"></td>
                 </tr>
             </thead> 
+            <tbody>
+                {{#each post}}
+                    {{#dataValues}} 
+                        <tr>
+                            <td class="text-center">{{nome}}</td>
+                            <td class="text-center">{{telefone}}</td>
+                            <td class="text-center">{{origem}}</td>
+                            <td class="text-center">{{data_contato}}</td>
+                            <td class="text-center">{{observacao}}</td>
+                            <td><button type="submit" class="btn btn-warning">Editar</button></td>
+                            <td><button type="submit" class="btn btn-danger">Excluir</button></td>
+                        </tr>
+                    {{/dataValues}}
+                {{/each}}    
+            </tbody>      
         </table>
     </div>
 </div>
