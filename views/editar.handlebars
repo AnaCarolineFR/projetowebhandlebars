@@ -1,0 +1,58 @@
+<div class="container w-75">
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="./">SISTEMA WEB</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page"
+                            href="">Cadastrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" href="/consultar">Consultar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-sm gap-3">
+        <p class="display-6">Editar - Agendamento de Potenciais Clientes</p>
+        <p>Cadastrar Agendamento de potenciais clientes</p>
+    </div>
+
+    {{#each post}}
+        {{#dataValues}}   
+            <form action="/atualizar" method="POST" class="p-3" style="padding-bottom: 200px;">
+                <div class="col-md-12 mb-4">
+                    <input type="hidden" name="id" class="form-control" id="id" value="{{id}}">
+                    <label for="inputNome" class="form-label">Nome:</label>
+                    <input name="nome" type="nome" class="form-control" id="inputNome" value="{{nome}}">
+                </div>
+                <div class="col-md-12 mb-4">
+                    <label for="inputTelefone" class="form-label">Telefone:</label> 
+                    <input name="telefone" type="telefone" class="form-control" id="inputTelefone" value="{{telefone}}">
+                </div>
+                <div class="col-md-12 mb-4">
+                        <label for="inputOrigem" class="form-label">Origem:</label>
+                        <select name="origem" id="inputOrigem" class="form-select">
+                                <option selected disabled value="{{orgiem}}">{{origem}}</option>
+                                <option value="Celular">Celular</option>
+                                <option value="Telefone fixo">Telefone fixo</option>     
+                        </select>  
+                </div>
+                <div class="col-12 mb-4">
+                    <label for="inputData" class="form-label">Data do contato:</label>
+                    <input name="data_contato" type="date" class="form-control" id="inputData" value="{{data_contato}}">
+                </div>
+                <div class="col-md-12 mb-4">
+                    <label for="inputObs" class="form-label">Observação:</label>
+                    <textarea name="observacao" class="form-control" id="inputObs" rows="3">{{observacao}}</textarea>
+                </div>
+                <div class="col-12 mb-4">
+                    <button type="submit" class="btn btn-primary">Atualizar</button>
+                </div>
+                </div>
+            </form>
+        {{/dataValues}}
+    {{/each}}        
+</div>

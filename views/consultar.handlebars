@@ -49,8 +49,8 @@
                             <td class="text-center">{{origem}}</td>
                             <td class="text-center">{{data_contato}}</td>
                             <td class="text-center">{{observacao}}</td>
-                            <td><button type="submit" class="btn btn-warning">Editar</button></td>
-                            <td><button type="submit" class="btn btn-danger">Excluir</button></td>
+                            <td><a type="button" class="btn btn-warning" href="/editar/{{id}}">Editar</a></td>
+                            <td><a type="reset" class="btn btn-danger" href="/excluir/{{id}}">Excluir</a></td>
                         </tr>
                     {{/dataValues}}
                 {{/each}}    
